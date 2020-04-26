@@ -11,3 +11,8 @@ body {
 .hidden {
   display: none;
 }
+
+#result {
+  max-width: 100vw;
+  max-height: 100vh;
+}
