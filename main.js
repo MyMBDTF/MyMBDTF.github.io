@@ -14,7 +14,11 @@ uploadElem.addEventListener("change", () => {
   uploadImage.src = URL.createObjectURL(file);
   uploadImage.onload = () => {
     ctx.translate(750, 750);
-    ctx.drawImage(uploadImage, -uploadImage.width/2, -uploadImage.height/2 , Math.max(uploadImage.width, 569), Math.max(uploadImage.height, 569));
+
+    const w = Math.max(uploadImage.width, 569);
+    const h = Math.max(uploadImage.height, 569);
+    ctx.drawImage(uploadImage, -w/2, -w/2, w, h);
+
     ctx.translate(-750, -750);
     ctx.drawImage(fantasyImage, 0, 0);
   }
