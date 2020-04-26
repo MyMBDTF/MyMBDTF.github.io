@@ -21,8 +21,7 @@ uploadElem.addEventListener("change", () => {
 
     ctx.translate(-750, -750);
     ctx.drawImage(fantasyImage, 0, 0);
+    
+    window.location = canvas.toDataURL();
   }
-
-  document.getElementById("upbutton").classList.add("hidden");
-  canvas.classList.remove("hidden");
 }, false);
